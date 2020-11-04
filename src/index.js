@@ -3,6 +3,8 @@ import template from "./template/template.hbs";
 import { error } from "@pnotify/core";
 import "@pnotify/core/dist/PNotify.css";
 import "@pnotify/core/dist/BrightTheme.css";
+import * as basicLightbox from "basiclightbox";
+import "../node_modules/basiclightbox/dist/basicLightbox.min.css";
 import "./css/style.css";
 
 let buttonLoadMore = document.querySelector(".button");
@@ -47,3 +49,13 @@ window.addEventListener("scroll", () => {
     setTimeout(scrollFunc, 100);
   }
 });
+
+const largePicture = function (e) {
+  if (e.target.nodeName === "IMG") {
+    const instance = basicLightbox.create(`
+      <img src=${e.target.dataset["name"]}>
+  `);
+    instance.show();
+  } else "";
+};
+list.addEventListener("click", largePicture);
