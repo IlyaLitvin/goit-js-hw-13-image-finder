@@ -45,11 +45,13 @@ li {
 }
 button {
   width: 100px;
-  height: 50px;
+  height: 30px;
   background-color: #420f75;
   color: aliceblue;
   box-shadow: 15px 15px 27px 13px #7f3571;
   margin-bottom: 50px;
+  border: 1px solid goldenrod;
+  border-radius: 5px;
 }
 button:hover {
   background-color: #56208b;
@@ -74,4 +76,5 @@ button:hover {
 img {
   width: 400px;
   height: 250px;
+  object-fit: cover;
 }
