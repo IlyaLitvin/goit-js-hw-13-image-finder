@@ -8,7 +8,7 @@ import "../node_modules/basiclightbox/dist/basicLightbox.min.css";
 import "./css/style.css";
 
 let buttonLoadMore = document.querySelector(".button");
-let input = document.querySelector('[type="text"]');
+let input = document.querySelector("input");
 let list = document.querySelector(".gallery");
 let page = 1;
 
@@ -37,7 +37,7 @@ const loadMore = function () {
     });
   });
 };
-// buttonLoadMore.addEventListener("click", loadMore);
+buttonLoadMore.addEventListener("click", loadMore);
 input.addEventListener("change", newPicture);
 window.addEventListener("scroll", () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
