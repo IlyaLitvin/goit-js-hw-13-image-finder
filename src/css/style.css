@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  text-align: center;
+  background-color: hotpink;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.stats-item:not(:last-child) {
+  margin-right: 25px;
+}
+.photo-card {
+  outline: 3px solid#663399;
+  background-color: rgba(37, 158, 102, 0.247);
+  width: 400px;
+  height: 330px;
+  position: relative;
+  box-shadow: 13px 14px 20px -4px #7565ed;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+.is-hidden {
+  display: none;
+}
+button {
+  width: 100px;
+  height: 50px;
+  background-color: #420f75;
+  color: aliceblue;
+  box-shadow: 15px 15px 27px 13px #7f3571;
+  margin-bottom: 50px;
+}
+button:hover {
+  background-color: #56208b;
+}
+.list {
+  color: rgb(53, 4, 63);
+}
+.title {
+  text-transform: uppercase;
+  font-style: italic;
+}
+.inp {
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  font-size: 23px;
+  border: 3px solid mediumseagreen;
+  font-style: italic;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+img {
+  width: 400px;
+  height: 250px;
+}
