@@ -10,9 +10,11 @@ import "./css/style.css";
 let buttonLoadMore = document.querySelector(".button");
 let input = document.querySelector("input");
 let list = document.querySelector(".gallery");
+let form = document.querySelector("#search-form");
 let page = 1;
 
-const newPicture = function () {
+const newPicture = function (e) {
+  e.preventDefault();
   apiService(input.value, page).then((data) => {
     if (data.hits.length > 0) {
       data.hits.forEach((el) => {
@@ -38,7 +40,7 @@ const loadMore = function () {
   });
 };
 buttonLoadMore.addEventListener("click", loadMore);
-input.addEventListener("change", newPicture);
+form.addEventListener("submit", newPicture);
 window.addEventListener("scroll", () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
   if (clientHeight + scrollTop >= scrollHeight - 1) {
